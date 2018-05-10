@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="photoUpload">
+<head>
+	<title>Hutfarm Upload</title>
+	<!-- requiring bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- linking style.css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- requiring angular -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<!-- requiring angular routing -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<!-- requiring firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCJEOaWGUqB7XWYbeK6xcTUYFoSGKo3wE4",
+    authDomain: "hutfarm-60c7c.firebaseapp.com",
+    databaseURL: "https://hutfarm-60c7c.firebaseio.com",
+    projectId: "hutfarm-60c7c",
+    storageBucket: "hutfarm-60c7c.appspot.com",
+    messagingSenderId: "764866777989"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+</head>
+<body>
+
+	<div ng-view></div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
