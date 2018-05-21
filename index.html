@@ -2,6 +2,9 @@
 <html ng-app="photoUpload">
 <head>
 	<title>Hutfarm Upload</title>
+	 <meta charset="utf-8">
+     
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- requiring bootstrap -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- linking style.css -->
@@ -29,13 +32,16 @@
 <body>
 
 	<div ng-view></div>
-
+<!-- requiring jquery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 </script>
+<!-- requiring angular fire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<!-- requiring ng-file upload -->
 <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
 <script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+<!-- connecting to scriptjs -->
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

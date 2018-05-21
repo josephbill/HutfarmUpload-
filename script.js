@@ -65,7 +65,8 @@ angular.module('photoUpload', ['ngRoute', 'ngFileUpload', 'firebase'])
      	var imageName = snapshot.metadata.name;
 
      	//storing images url and details into firebase database
-     	var ref = firebase.database().ref("Images");
+      //check sticky note incase this line fAILS. 
+     	var ref = firebase.database().ref("images");
      	var urls = $firebaseArray(ref);
      	//add data to firebase
      	urls.$add({
@@ -91,21 +92,23 @@ angular.module('photoUpload', ['ngRoute', 'ngFileUpload', 'firebase'])
 }])
 
 .controller('GalleryCtrl', ['$scope', '$firebaseArray', function($scope, $firebaseArray){
-   //create firebase database ref to access data 
-   var ref = firebase.database().ref('Images')
+   //create firebase database ref to access data
+   //check sticky note if debug fails 
+   var ref = firebase.database().ref('images')
    var urls = $firebaseArray(ref);
    $scope.urls = urls;
 }])
 
 .controller('ManageCtrl', ['$scope', '$firebaseArray', '$firebaseStorage', function($scope, $firebaseArray, $firebaseStorage){
   //creating a firebase ref to access data
-   var ref = firebase.database().ref('Images')
+  ///check sticky notes
+   var ref = firebase.database().ref('images')
    var urls = $firebaseArray(ref);
    $scope.urls = urls;
 
    //delete function
    $scope.deleteFile = function(url){
-    //get storage reference
+    //get storage references
     var storageRef = firebase.storage().ref('Photos/' + url.imageName);
     var storage = firebaseStorage(storageRef);
     //delete file
